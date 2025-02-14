@@ -6,14 +6,18 @@ import requests
 import asyncio
 from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
+from dotenv import load_dotenv
+
+# Memuat file .env
+load_dotenv()
 
 # Replace with your bot token
-BOT_TOKEN = "7908695109:AAGpeUnaJcKx3IZttuaLSbFP_tUJtdX0CmY"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 # GitHub URLs for update checking
-GITHUB_REPO = "https://github.com/medanproject/medanproject_bot/releases/latest"
-VERSION_URL = "https://raw.githubusercontent.com/medanproject/medanproject_bot/main/bot_version.txt"
-DOWNLOAD_URL = "https://github.com/medanproject/medanproject_bot/releases/latest/download/bot.exe"
+GITHUB_REPO = os.getenv("GITHUB_REPO")
+VERSION_URL = os.getenv("VERSION_URL")
+DOWNLOAD_URL = os.getenv("DOWNLOAD_URL")
 
 CURRENT_VERSION = "1.0"  # Sesuaikan dengan versi bot Anda saat ini
 
