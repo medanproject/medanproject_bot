@@ -4,7 +4,7 @@ import sys
 import subprocess
 import requests
 import asyncio
-from telegram import Update
+from telegram import Update, Bot
 from telegram.ext import Application, CommandHandler, ContextTypes
 from dotenv import load_dotenv
 
